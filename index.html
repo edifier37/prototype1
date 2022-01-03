@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANSwer</title>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="./src/main.css">
+
+    <link rel="manifest" href="./manifest.json">
+
+    <link rel="apple-touch-icon" href="./icons/android-icon-96x96.png">
+
+    <link rel="shortcut icon" href="./icons/favicon.ico">
+
+    <script src="https://kit.fontawesome.com/5b39c1b499.js" crossorigin="anonymous"></script>
+
+    <meta name="apple-mobile-web-app-status-bar" content="green">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="box">
+            <img src="./icons/logo.png" alt="logo">
+        </div>
+        <button class="profile"><i class="fas fa-id-card fa-2x"></i><br>Profile</button>
+    </header>
+
+    <hr size="2rem" width="100%" color="#8f6da8">
+
+    <main id="main">
+
+        <section id="A" class="grid">
+
+            <div class="row1">
+                <button class="emergency"><i class="fas fa-phone-alt fa-2x"></i><br>Emergency Contact</button>
+            </div>
+            <div class="row1">
+                <button class="alerts"><i class="fas fa-exclamation-triangle fa-2x"></i><br>Alerts</button>
+            </div>
+            <br>
+            <div class="row2">
+                <button class="exercise"><i class="fas fa-running fa-2x"></i><br>Exercise</button>
+            </div>
+            <div class="row2">
+                <button class="analysis"><i class="fas fa-clipboard fa-2x"></i><br>Analysis</button>
+            </div>
+            <div>
+                <button onclick="window.location.href='scanner.html';" class="scan">
+                    <i class="fas fa-heartbeat fa-2x"></i>
+                    <br>
+                    Scan Now
+                </button>
+            </div>
+        </section>
+
+        <section id="B" class="grid">
+            <div class="search-bar">
+                <input type="text" placeholder="Search Date...">
+            </div>
+        </section>
+
+    </main>
+
+
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("./sw.js")
+                .then(reg => console.log("Service worker registered", reg))
+                .catch(err => console.log("Service worker not registered", err));
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.plot.ly/plotly-2.4.2.min.js"></script>
+    <script type="text/javascript" src="./src/main.js"></script>
+
+
+</body>
+
+</html>
